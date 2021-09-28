@@ -1,0 +1,21 @@
+@import "reset";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-family-base;
+  background-color: $base-color;
+  color: $primary-color;
+  #app {
+    height: 100%;
+  }
+}
