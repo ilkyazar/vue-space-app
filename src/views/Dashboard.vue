@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-  <AstronomyPictureOfDay :apodDetails="details"/>
+    <AstronomyPictureOfDay :apodDetails="details" />
   </div>
 </template>
 
@@ -17,7 +17,15 @@ export default {
   },
   beforeMount() {
     fetch(
-      `${process.env.VUE_APP_NASA_URL}api_key=${process.env.VUE_APP_API_KEY}&date=${new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate()}`
+      `${process.env.VUE_APP_NASA_URL}api_key=${
+        process.env.VUE_APP_API_KEY
+      }&date=${
+        new Date().getFullYear() +
+        "-" +
+        (new Date().getMonth() + 1) +
+        "-" +
+        new Date().getDate()
+      }`
     )
       .then((response) => response.json())
       .then((data) => {

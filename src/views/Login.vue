@@ -35,6 +35,7 @@ export default {
   methods: {
     submit() {
       // set user here
+      this.$router.push({ name: "Secure" });
       console.log("Logging in");
       setTimeout(() => TokenService.saveToken("ThisIsToken"), 2000);
     },

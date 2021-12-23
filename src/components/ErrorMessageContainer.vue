@@ -15,7 +15,7 @@ export default {
     schema: {},
   },
   components: {
-      ErrorMessage,
-  }
+    ErrorMessage,
+  },
 };
 </script>

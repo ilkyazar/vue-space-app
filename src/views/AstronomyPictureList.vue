@@ -8,7 +8,8 @@
         >
       </li>
     </ul> -->
-    <Datatable v-if="dataLoaded"
+    <Datatable
+      v-if="dataLoaded"
       :rows="tableRows"
       :columns="tableColumns"
       :totalRecordCount="tableTotalRecordCount"

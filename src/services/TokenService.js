@@ -13,11 +13,10 @@ const TokenService = {
   },
 
   saveToken(accessToken) {
-    if (typeof(accessToken) !== 'string') {
+    if (typeof accessToken !== "string") {
       localStorage.setItem(ACCESS_TOKEN_KEY, JSON.stringify(accessToken));
-    }
-    else {
-        localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
+    } else {
+      localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
     }
   },
 

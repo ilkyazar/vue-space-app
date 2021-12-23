@@ -9,7 +9,9 @@
         <p>
           {{ apodDetails.explanation }}
         </p>
-        <p v-if="apodDetails.copyright">Copyright: {{ apodDetails.copyright }}</p>
+        <p v-if="apodDetails.copyright">
+          Copyright: {{ apodDetails.copyright }}
+        </p>
       </div>
       <div class="item-img-container">
         <img :src="apodDetails.url" />

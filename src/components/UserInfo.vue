@@ -18,10 +18,10 @@ export default {
   },
   /*async*/ mounted() {
     setTimeout(() => {}, 3000);
-    const user = /*await*/ {name: "İlkyaz", username : "ilkyaz"};
-    this.$store.commit('setUser', user); 
-    // Vuex dispatch action 
-  }
+    const user = /*await*/ { name: "İlkyaz", username: "ilkyaz" };
+    this.$store.commit("setUser", user);
+    // Vuex dispatch action
+  },
 };
 </script>
 

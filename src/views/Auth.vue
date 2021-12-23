@@ -9,8 +9,7 @@
 <script>
 export default {
   name: "Auth",
-  components: {
-  },
+  components: {},
 };
 </script>
 
