@@ -61,9 +61,15 @@ form {
 
   button {
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
     color: $primary-color;
     background: linear-gradient(135deg, $tertiary-color 0%, $base-color 90%);
     margin: 20px 0;
+    cursor: pointer;
+  }
+  button:hover {
+    background: linear-gradient(45deg, $tertiary-color 55%, $base-color 98%);
   }
 
   a {

@@ -19,10 +19,6 @@ export default {
     };
   },
   beforeMount() {
-    // DataTable source'undan bu tarihe ait item olup olmadığına bak
-    // Eğer varsa this.details'e at
-    // Yoksa fetch
-    // v-if url yanlışsa
     fetch(
       `${process.env.VUE_APP_NASA_URL}api_key=${process.env.VUE_APP_API_KEY}&date=${this.$route.params.pictureid}`
     )

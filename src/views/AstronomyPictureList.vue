@@ -1,33 +1,34 @@
 <template>
   <div class="items">
-    <!--     <ul class="item-list">
+    <ul class="item-list">
       <li v-for="item in items" :key="item">
         <router-link
           :to="{ name: 'AstronomyPicture', params: { pictureid: item.date } }"
           >{{ item.title }}</router-link
         >
       </li>
-    </ul> -->
-    <Datatable
+    </ul>
+    <!-- <Datatable
       v-if="dataLoaded"
       :rows="tableRows"
       :columns="tableColumns"
       :totalRecordCount="tableTotalRecordCount"
-    />
+    /> -->
   </div>
 </template>
 
 <script>
-import Datatable from "@/components/Datatable";
+// import Datatable from "@/components/Datatable";
 import formatDate from "@/lib/utils.js";
 
 export default {
   name: "AstronomyPictureList",
-  components: {
+  /* components: {
     Datatable,
-  },
+  }, */
   data() {
     return {
+      items: [],
       tableColumns: [
         {
           label: "Date",
@@ -72,6 +73,7 @@ export default {
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched data in AstronomyPictureList: ", data);
+        this.items = data;
         this.tableRows = data;
         this.dataLoaded = true;
         // table.isLoading = false;
@@ -87,7 +89,7 @@ export default {
   color: $primary-color;
   padding: 50px 150px;
 
-  /*   .item-list {
+  .item-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -102,6 +104,6 @@ export default {
         text-decoration: none;
       }
     }
-  } */
+  }
 }
 </style>
